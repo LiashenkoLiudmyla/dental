@@ -1,0 +1,391 @@
+body{
+    font-family: 'Didact Gothic', sans-serif;
+
+    
+}
+
+.modal-overlay{
+    display: none;
+}
+.modal-info{
+    display: none;
+}
+
+.checkbox{
+    display: none;    /* виключили  */  
+   
+}
+
+
+/* HEADER */
+
+
+.glorydent-logo{
+    max-width: 250px;
+    margin: 15px;
+}
+
+.main--flex::after{
+    content: ''url(../img/feathers/feasers.png);
+    position: absolute;
+    bottom: 0;
+    right: 0;
+  
+  
+}
+
+.img_main_english{
+    opacity: 0;
+}
+
+.container{
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.flex{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.header_link{
+    color: #182e63;
+    text-align: right;
+    text-decoration: none;
+    position: relative;
+}
+.header_ul{
+    margin-right: 40px;
+}
+.header_li:not(:last-of-type){
+    margin-right: 28px; 
+}
+.header_link--active{
+color: red;
+
+}
+.header_link:hover{
+    font-weight: bold;
+    transition: 300ms all;
+    color: rgb(0, 0, 0);
+}
+.header_link:hover::before{
+    content:'';
+    position: absolute;
+    width: 100%;
+    height: 0.5px;
+    background-color: rgb(164 189 215);
+    bottom: -0.5px;
+    transition: 1s;
+}
+.button{
+    border: none;
+    border-radius: 45px;
+    background-color: rgb(164 189 215);
+    color: #FFFFFF;
+}
+.button_1{
+    width: 143px;
+    height: 34px;
+    margin: 20px 0;
+}
+.button:hover{
+    cursor: pointer;
+    transition: 300ms;
+    background-color: rgb(114, 164, 217);
+    color:#012964;
+}
+
+
+          
+
+
+
+
+  /*FOOTER*/
+
+footer{
+  width: 100%;
+  background: rgb(45, 95, 156);
+}
+.footer-flex{
+    flex-direction: column;
+}
+.footer-img{
+    max-width: 275px;
+    margin-top: 50px;
+}
+
+
+.newsletter{
+    font-size: 20px;
+    line-height: 26px;
+    color: #FAFAFC;
+    max-width: 438px;
+    margin-top: 50px ;
+}
+
+
+.container_social{
+    max-width: 100px;
+    margin-top: 50px ;
+}
+
+.footer_bottom_text{
+    font-size: 14px;
+    line-height: 20px;
+    color: #FFFFFF;
+    margin-top: 50px ;
+}
+.icon_footer{
+    margin-right: 25px;
+}
+
+.footer_pos_feathers{
+    position: relative;
+    padding-bottom: 270px;
+
+}
+
+.footer_logo::before{
+    content: ''url(../img/feathers/feaser_withe.png);
+    position: absolute;
+    top: 0;
+    left: 0;
+    
+   
+}
+.footer_logo::after{
+    content: ''url(../img/feathers/feasers_withe.png);
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    z-index: 0;
+}
+
+
+
+
+/* Адаптивність на
+
+1440рх----1140рх
+1200рх
+1090рх----750рх
+800рх
+550рх
+480рх----310рх
+360рх
+320рх */
+
+@media screen and (max-width: 800px){
+    .container{
+        max-width: 700px;
+        
+    }
+    .footer_logo::before{
+        display: none;
+     }
+     .footer_logo::after{
+        display: none;
+     }
+
+    .reviews-adapt, .portfolio-list{
+
+        display: inline-block;
+        margin: 0 auto;
+        padding: 0 auto;
+        text-align: center;
+        flex-direction: column;
+    }
+    .footer_pos_feathers{
+        max-width: 350px;
+    }
+
+    .glorydent-logo{
+        display: inline-block;
+        max-width: 35%;
+        margin: 15px;
+    }
+
+
+  /* burger menu */
+    .checkbox, .hambergerIcon{
+        display: inline-block;    /* включили  */  
+       
+    }
+   
+    
+    /*палички*/
+
+   
+    .hambergerIcon{ 
+        height: 5px; 
+        width:50px; 
+        position: absolute; 
+        /* top: 50%; 
+        left: 50%;  */
+        border-radius: 50px; 
+        background-color: #0e368e; 
+        transform: translate(-50%,-50%) rotate(0deg); 
+        transition: all ease 0.5s; 
+    } 
+     
+    .hambergerIcon::before, .hambergerIcon::after{ 
+        content:""; 
+        position: absolute; 
+        height: inherit; 
+        border-radius: inherit; 
+        background-color: inherit; 
+        margin: auto; 
+        width: 50%; 
+        transition: all ease 0.5s; 
+    } 
+     
+    .hambergerIcon::before{ 
+        top: -15px; 
+        left: 0; 
+        transform-origin: left; 
+    } 
+    .hambergerIcon::after{ 
+        bottom:-15px; 
+        right: 0; 
+        transform-origin: right; 
+    } 
+    .open{ 
+        transform:translate(-50%,-50%) rotate(135deg); 
+    } 
+    .open::before{ 
+        top:0; 
+        transform: translateX(100%) rotate(-90deg); 
+    } 
+    .open::after{ 
+        bottom:0; 
+        transform: translateX(-100%) rotate(-90deg); 
+    }
+    .header_link {
+        font-size: 22px;
+        line-height: 55px;
+        margin-top: 55px;
+        transition: all 1s;
+    }
+     
+    .header_link:hover{
+        color: rgba(248,216,207,.8);
+        transition: all 1s;
+    }
+ 
+    
+    .menu{
+        position: relative; 
+                             
+    }
+    
+    .checkbox{
+        display: block;
+        width: 30px;
+        height: 30px;
+        margin: 0;
+        bottom: 0;
+        right: 10px;
+        opacity: 0; 
+        z-index: 5; 
+    }
+    .flex_menu{
+        position: fixed;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        top: 0;
+        left: -100%;
+        width: 50%;
+        height: 100vh;
+        padding: 20px 15px;
+        background-color: rgba(111, 146, 198, 0.95);
+        transition: all 1s;
+        z-index: 2; 
+    }
+    .flex_menu--activ{
+        left: 0;
+    }
+
+    .header_li:not(:last-of-type){
+    margin-right: 0; 
+    } 
+    
+    .header_li{
+        margin-right: 0;  
+        margin: 10px 0; 
+    }
+    .header_link{
+        font-size: 22px;
+    }
+    .background_german{
+       display: none;
+        }
+    }
+
+
+    @media screen and (max-width: 700px){
+        .container{
+             max-width: 550px;
+            
+        }
+        .line_german_black{
+            display: none;
+        }
+        
+        .line_german_red{
+            display: none;
+        }
+        .line_german_yellou{
+            display: none;
+        }
+        .container-adapt{
+            display: none;
+        }
+        .footer-img{
+            display: none;
+         }
+    
+         .footer_logo::before{
+            display: none;
+         }
+         .footer_logo::after{
+            display: none;
+         }
+
+         .background_german{
+            display: none;
+             }
+             
+       
+           
+        }
+
+        @media screen and (max-width: 550px){
+            .container{
+                 max-width: 310px;
+                
+            }
+           
+        }
+   
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
